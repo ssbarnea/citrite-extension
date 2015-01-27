@@ -1,0 +1,9 @@
+.linkclass { }
+
+/* that's for coloring the visited links differently */
+a:visited {
+    color: purple !important;
+    text-decoration: none;
+    /*text-shadow: 0 0 0.2em #FFF;*/
+    text-shadow: 2px 2px 3px red !important;
+}

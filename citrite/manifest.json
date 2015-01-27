@@ -1,0 +1,29 @@
+{
+  "name": "CITRITE Productivity for Citrix Users",
+  "version": "1.1.12",
+  "manifest_version": 2,
+  "minimum_chrome_version": "18",
+  "omnibox": { "keyword" : "citrite" },
+  "description": "CITRITE extension improves user experience on CITRIX intranet websites.",
+  "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "48": "icon48.png"
+  },
+  "browser_action": {
+    "default_icon": "icon32.png",
+    "default_popup": "popup.html"
+  },
+ "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [ "tabs", "background" ],
+   "content_scripts": [ {
+      "css": [ "style.css" ],
+      "include_globs": [ "*://*citrix.com*", "*://*citrite.net*", "*://*xensource.com*", "*://*xenserver.org*", "*://*podio.com/*", "*://*.trello.com*", "*://*.atlassian.com*", "*://citrix.hire.com*" ],
+      "js": [ "jquery.min.js", "jquery.ba-replacetext.js", "clickable_links.js"],
+      "matches": [ "\u003Call_urls\u003E" ]
+   } ]
+
+}
