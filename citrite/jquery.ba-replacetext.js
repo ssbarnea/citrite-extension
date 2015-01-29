@@ -32,9 +32,11 @@
           if ( node.nodeType === 3 ) {
             
             // The original node value.
-            val = node.nodeValue;
+            val = node.value;
             
             // The new value.
+            if (typeof val !== "undefined" && typeof val.replace !== "undefined") {
+                        
             new_val = val.replace( search, replace );
             
             // Only replace text if the new value is actually different!
@@ -50,8 +52,9 @@
               } else {
                 // The new value contains no HTML, so it can be set in this
                 // very fast, simple way.
-                node.nodeValue = new_val;
+                node.value = new_val;
               }
+            }
             }
           }
           

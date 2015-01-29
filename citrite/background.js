@@ -7,7 +7,7 @@ function navigate(url) {
 }
 
 
-chrome.runtime.onInstalled.addListener(function(details) { if (details.reason == "update") { chrome.windows.create({url: "popup.html", type: "popup"}); } });
+//chrome.runtime.onInstalled.addListener(function(details) { if (details.reason == "update") { chrome.windows.create({url: "popup.html", type: "popup"}); } });
 
 /*
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
